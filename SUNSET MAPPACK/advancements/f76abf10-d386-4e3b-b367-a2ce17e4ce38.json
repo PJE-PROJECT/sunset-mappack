@@ -1,0 +1,27 @@
+{
+  "physical_things:id": {
+    "criteria": {
+      "requirement": "2025-04-05 16:41:30 +0300"
+    },
+    "done": true
+  },
+  "delta:player_setup": {
+    "criteria": {
+      "requirement": "2025-04-05 16:41:30 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2025-04-05 16:41:30 +0300"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:plains": "2025-04-05 16:47:57 +0300"
+    },
+    "done": false
+  },
+  "DataVersion": 3955
+}

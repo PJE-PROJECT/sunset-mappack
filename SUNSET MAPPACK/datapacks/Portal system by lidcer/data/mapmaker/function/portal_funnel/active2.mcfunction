@@ -1,0 +1,4 @@
+execute if block ^ ^-1 ^1 redstone_block if entity @s[tag=!active] run function mapmaker:portal_funnel/anim_start
+execute if block ^ ^-1 ^1 redstone_block if entity @s[tag=!active,tag=emitter_blue] rotated ~180 ~ align xyz positioned ~0.5 ~-0.5 ~0.5 positioned ^ ^ ^-0.4 run function excursion_funnel:create/horizontal/raycast
+execute if block ^ ^-1 ^1 redstone_block if entity @s[tag=!active,tag=emitter_orange] rotated ~180 ~ align xyz positioned ~0.5 ~-0.5 ~0.5 positioned ^ ^ ^-0.4 run function excursion_funnel:create/orange/horizontal/raycast
+execute if block ^ ^-1 ^1 redstone_block if entity @s[tag=!active] run tag @s add active

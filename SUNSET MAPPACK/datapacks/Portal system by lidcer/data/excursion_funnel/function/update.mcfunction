@@ -1,0 +1,7 @@
+execute if entity @s[type=item_display,tag=funnel_emitter,tag=emitter_blue,tag=!emitter_orange,tag=active] run tag @s remove active
+execute if entity @s[type=item_display,tag=funnel_emitter,tag=emitter_orange,tag=!emitter_blue,tag=active] run tag @s remove active
+
+kill @e[type=item_display,tag=funnel]
+
+execute as @e[type=item_display,tag=funnel_emitter,tag=emitter_blue,tag=!emitter_orange,tag=active] at @s rotated ~180 ~ align xyz positioned ~0.5 ~-0.5 ~0.5 positioned ^ ^ ^-0.4 run function excursion_funnel:create/horizontal/raycast
+execute as @e[type=item_display,tag=funnel_emitter,tag=emitter_orange,tag=!emitter_blue,tag=active] at @s rotated ~180 ~ align xyz positioned ~0.5 ~-0.5 ~0.5 positioned ^ ^ ^-0.4 run function excursion_funnel:create/orange/horizontal/raycast
