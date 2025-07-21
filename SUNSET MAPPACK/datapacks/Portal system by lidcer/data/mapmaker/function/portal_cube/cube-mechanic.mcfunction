@@ -44,8 +44,3 @@ execute if entity @s[tag=laser_cube,tag=!active,tag=!fizzled,tag=!hovering,nbt={
 execute if entity @s[tag=laser_cube,tag=active,tag=!fizzled,tag=!hovering,nbt={OnGround:1b}] align y positioned ~ ~0.5 ~ unless entity @e[type=minecraft:marker,distance=..1.1,tag=laser_end,limit=1] run tag @s remove active
 
 execute if entity @s[tag=laser_cube,tag=active,tag=!hovering] at @s positioned ^ ^0.6 ^-0.3 run function laser:laser/raycast
-
-
-
-execute if entity @s[tag=!hovering,nbt={OnGround:1b}] at @e[tag=sbpg.portal_main,tag=sbpg.portal_second,tag=floor,distance=..2] positioned ^ ^-0.5 ^0.1 if entity @s[distance=..1.5] at @e[tag=sbpg.portal_first,tag=!floor,tag=!ceiling,tag=sbpg.portal_main] positioned ^ ^ ^1 run tp @s ~ ~ ~
-execute if entity @s[tag=!hovering,nbt={OnGround:1b}] at @e[tag=sbpg.portal_main,tag=sbpg.portal_first,tag=floor,distance=..2] positioned ^ ^-0.5 ^0.1 if entity @s[distance=..1.5] at @e[tag=sbpg.portal_second,tag=!floor,tag=!ceiling,tag=sbpg.portal_main] positioned ^ ^ ^1 run tp @s ~ ~ ~

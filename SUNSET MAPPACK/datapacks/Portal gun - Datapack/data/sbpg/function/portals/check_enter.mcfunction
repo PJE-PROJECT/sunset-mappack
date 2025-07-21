@@ -57,4 +57,9 @@ execute at @s[type=minecraft:player,gamemode=!spectator,nbt=!{RootVehicle:{Entit
 
 
 
+execute if entity @s[nbt={OnGround:1b}] at @e[tag=sbpg.portal_main,tag=sbpg.portal_first,tag=floor,distance=..2] positioned ^ ^-0.5 ^0.1 if entity @s[distance=..1.5] positioned ^ ^0.5 ^0.9 if entity @e[tag=sbpg.portal_main,tag=sbpg.portal_second,tag=!floor,limit=1] run function sbpg:portals/enter
+execute if entity @s[nbt={OnGround:1b}] at @e[tag=sbpg.portal_main,tag=sbpg.portal_second,tag=floor,distance=..2] positioned ^ ^-0.5 ^0.1 if entity @s[distance=..1.5] positioned ^ ^0.5 ^0.9 if entity @e[tag=sbpg.portal_main,tag=sbpg.portal_first,tag=!floor,limit=1] run function sbpg:portals/enter
+
+
+
 execute positioned ^ ^1 ^ if score current_forwardness workspace matches 1.. if score future_forwardness workspace matches ..0 at @s[type=minecraft:player,gamemode=!spectator,nbt=!{RootVehicle:{Entity:{id:"minecraft:rabbit"}}},nbt=!{RootVehicle:{Entity:{id:"minecraft:turtle"}}}] unless entity @e[type=item_display,tag=funnel,distance=..2] positioned ~ ~-0.7 ~ if entity @e[distance=..1.4,tag=sbpg.portal,tag=floor] run function sbpg:portals/enter

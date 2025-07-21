@@ -12,6 +12,16 @@ execute if entity @e[tag=sbpg.portal_first,limit=1] if entity @e[tag=sbpg.portal
 execute if entity @e[tag=sbpg.portal_first,limit=1] unless entity @e[tag=sbpg.portal_second,limit=1] run tag @e[type=armor_stand,tag=gel,tag=!portable] remove portable
 execute unless entity @e[tag=sbpg.portal_first,limit=1] if entity @e[tag=sbpg.portal_second,limit=1] run tag @e[type=armor_stand,tag=gel,tag=!portable] remove portable
 
+# GATES BLOCK PORTALING
+execute at @e[tag=sbpg.portal,tag=sbpg.portal_main,tag=wall,limit=2] if block ^ ^ ^0.5 #portal:portal_gate_enter_block run tag @e[tag=portable] remove portable
+execute at @e[tag=sbpg.portal,tag=sbpg.portal_main,tag=wall,limit=2] if block ^ ^1 ^0.5 #portal:portal_gate_enter_block run tag @e[tag=portable] remove portable
+
+execute at @e[tag=sbpg.portal,tag=sbpg.portal_main,tag=floor,limit=2] if block ^ ^ ^2 #portal:portal_gate_enter_block run tag @e[tag=portable] remove portable
+execute at @e[tag=sbpg.portal,tag=sbpg.portal_main,tag=floor,limit=2] if block ^ ^-1 ^2 #portal:portal_gate_enter_block run tag @e[tag=portable] remove portable
+
+execute at @e[tag=sbpg.portal,tag=sbpg.portal_main,tag=ceiling,limit=2] if block ^ ^-0.5 ^-1 #portal:portal_gate_enter_block run tag @e[tag=portable] remove portable
+execute at @e[tag=sbpg.portal,tag=sbpg.portal_main,tag=ceiling,limit=2] if block ^ ^-1.5 ^-1 #portal:portal_gate_enter_block run tag @e[tag=portable] remove portable
+
 
 
 

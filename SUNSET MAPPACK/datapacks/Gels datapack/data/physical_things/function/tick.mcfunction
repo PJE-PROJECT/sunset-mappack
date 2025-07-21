@@ -1,5 +1,5 @@
 execute as @e[tag=cube,tag=!in_funnel] at @s if entity @e[type=item_frame,tag=blue_gel,distance=..70] run function physical_things:tick_cube
-execute as @a[tag=!in_funnel] at @s if entity @e[type=item_frame,tag=gel,distance=..70] run function physical_things:tick_player
+execute as @a[tag=!in_funnel,tag=!b_pic,tag=!o_pic] at @s if entity @e[type=item_frame,tag=gel,distance=..70] run function physical_things:tick_player
 execute if data storage midwut:main PlayerData run data remove storage midwut:main PlayerData
 
 
