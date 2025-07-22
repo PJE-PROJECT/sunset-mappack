@@ -1,6 +1,6 @@
 tag @s add raycasting
 
-scoreboard players set colour workspace 16745731
+scoreboard players set colour workspace 16739586
 
 
 execute store result storage 1:1 x int 1 run data get entity @s Rotation[0]

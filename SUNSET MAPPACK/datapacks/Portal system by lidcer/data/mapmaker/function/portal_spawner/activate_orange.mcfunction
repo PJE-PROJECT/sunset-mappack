@@ -1,4 +1,4 @@
-scoreboard players set colour workspace 16745731
+scoreboard players set colour workspace 16739586
 execute unless score @s time = @s time run scoreboard players set @s time 0
 
 execute positioned ~ ~-0.1 ~ if entity @s[tag=wall] unless entity @e[type=minecraft:area_effect_cloud,distance=..0.5,tag=sbpg.portal,limit=1] run scoreboard players add @s time 1

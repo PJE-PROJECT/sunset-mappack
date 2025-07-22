@@ -50,7 +50,7 @@ scoreboard players set loading workspace 1
 execute if score motion_blur config matches 0 run kill @e[type=minecraft:item_display,tag=motion_blur,distance=..200]
 
 #PORTALS
-scoreboard players set colour workspace 39423
+scoreboard players set colour workspace 24831
 execute at @e[tag=saved_portal_first_pos,tag=N,tag=!D,tag=!U,tag=!45_portal_pos] align xyz positioned ~ ~ ~1 run function portal_blue:orange/portal_south
 execute at @e[tag=saved_portal_first_pos,tag=S,tag=!D,tag=!U,tag=!45_portal_pos] align xyz positioned ~ ~ ~-1 run function portal_blue:orange/portal_north
 execute at @e[tag=saved_portal_first_pos,tag=E,tag=!D,tag=!U,tag=!45_portal_pos] align xyz positioned ~-1 ~ ~ run function portal_blue:orange/portal_west
@@ -71,7 +71,7 @@ execute at @e[tag=saved_portal_first_pos,tag=S,tag=45_portal_pos] align xyz posi
 execute at @e[tag=saved_portal_first_pos,tag=E,tag=45_portal_pos] align xyz positioned ~0.6 ~0.4 ~ run function portal_blue:orange/45/portal_east
 execute at @e[tag=saved_portal_first_pos,tag=W,tag=45_portal_pos] align xyz positioned ~0.4 ~0.4 ~ run function portal_blue:orange/45/portal_west
 
-scoreboard players set colour workspace 16745731
+scoreboard players set colour workspace 16739586
 execute at @e[tag=saved_portal_second_pos,tag=N,tag=!D,tag=!U] align xyz positioned ~ ~ ~1 run function portal:orange/portal_south
 execute at @e[tag=saved_portal_second_pos,tag=S,tag=!D,tag=!U] align xyz positioned ~ ~ ~-1 run function portal:orange/portal_north
 execute at @e[tag=saved_portal_second_pos,tag=E,tag=!D,tag=!U] align xyz positioned ~-1 ~ ~ run function portal:orange/portal_west
