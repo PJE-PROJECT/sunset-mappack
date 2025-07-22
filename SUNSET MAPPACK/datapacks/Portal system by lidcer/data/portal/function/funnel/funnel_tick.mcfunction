@@ -12,8 +12,6 @@ execute if entity @s[type=minecraft:armor_stand,tag=gel_blob] run function porta
 scoreboard players add @s[type=player,scores={funnel_enter_delay=1..}] funnel_enter_delay 1
 execute if entity @s[type=player,scores={funnel_enter_delay=5..}] run tag @s add player_enter_tbeam_lp_01_looped
 scoreboard players set @s[type=player,scores={funnel_enter_delay=5..}] funnel_enter_delay 0
-#execute unless entity @e[type=minecraft:item_display,distance=..1.5,tag=funnel_h,limit=1,y_rotation=90] unless entity @e[type=minecraft:item_display,distance=..1.5,tag=funnel_h,limit=1,y_rotation=-90] store result entity @e[type=minecraft:slime,tag=funnel_r,limit=1] Motion[0] double 0.0015 run scoreboard players get @s f_motion_x
-#execute unless entity @e[type=minecraft:item_display,distance=..1.5,tag=funnel_h,limit=1,y_rotation=0] unless entity @e[type=minecraft:item_display,distance=..1.5,tag=funnel_h,limit=1,y_rotation=-180] store result entity @e[type=minecraft:slime,tag=funnel_r,limit=1] Motion[2] double 0.0015 run scoreboard players get @s f_motion_z
 
 
 execute if entity @s[type=player,tag=!in_funnel] run tp @s @s

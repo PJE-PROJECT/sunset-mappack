@@ -19,16 +19,16 @@ execute if entity @e[type=minecraft:item_display,distance=..1.9,tag=funnel_y,lim
 
 
 #FLOOR
-execute if entity @e[tag=sbpg.portal_first,tag=sbpg.portal_main,tag=floor,distance=..2] run function portal:funnel/portals_blue_to_orange
-execute if entity @e[tag=sbpg.portal_second,tag=sbpg.portal_main,tag=floor,distance=..2] run function portal:funnel/portals_orange_to_blue
+execute if entity @e[tag=sbpg.portal_first,tag=sbpg.portal_main,tag=floor,distance=..2] if entity @s[tag=portable] run function portal:funnel/portals_blue_to_orange
+execute if entity @e[tag=sbpg.portal_second,tag=sbpg.portal_main,tag=floor,distance=..2] if entity @s[tag=portable] run function portal:funnel/portals_orange_to_blue
 
 #WALL
-execute if entity @e[tag=sbpg.portal_first,tag=sbpg.portal_main,tag=!floor,tag=!ceiling,tag=!45_portal,distance=..0.8] run function portal:funnel/portals_blue_to_orange
-execute if entity @e[tag=sbpg.portal_second,tag=sbpg.portal_main,tag=!floor,tag=!ceiling,tag=!45_portal,distance=..0.8] run function portal:funnel/portals_orange_to_blue
+execute if entity @e[tag=sbpg.portal_first,tag=sbpg.portal_main,tag=!floor,tag=!ceiling,tag=!45_portal,distance=..0.8] if entity @s[tag=portable] run function portal:funnel/portals_blue_to_orange
+execute if entity @e[tag=sbpg.portal_second,tag=sbpg.portal_main,tag=!floor,tag=!ceiling,tag=!45_portal,distance=..0.8] if entity @s[tag=portable] run function portal:funnel/portals_orange_to_blue
 
 #CEILING
-execute if entity @e[tag=sbpg.portal_first,tag=sbpg.portal_main,tag=ceiling,distance=..1.3] run function portal:funnel/portals_blue_to_orange
-execute if entity @e[tag=sbpg.portal_second,tag=sbpg.portal_main,tag=ceiling,distance=..1.3] run function portal:funnel/portals_orange_to_blue
+execute if entity @e[tag=sbpg.portal_first,tag=sbpg.portal_main,tag=ceiling,distance=..1.3] if entity @s[tag=portable] run function portal:funnel/portals_blue_to_orange
+execute if entity @e[tag=sbpg.portal_second,tag=sbpg.portal_main,tag=ceiling,distance=..1.3] if entity @s[tag=portable] run function portal:funnel/portals_orange_to_blue
 
 
 
