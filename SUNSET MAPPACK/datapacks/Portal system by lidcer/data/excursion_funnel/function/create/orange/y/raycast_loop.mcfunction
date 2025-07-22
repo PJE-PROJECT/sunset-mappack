@@ -1,4 +1,4 @@
-# Добавить единичку в счёт Distance
+
 scoreboard players add @s Distance_funnel 1
 scoreboard players add @s Distance_funnel_render 1
 
@@ -19,5 +19,37 @@ tag @e[type=minecraft:item_display,distance=..0.95,tag=funnel_new,limit=1,x_rota
 tag @e[type=minecraft:item_display,distance=..0.95,tag=funnel_new,limit=1] remove funnel_new
 
 
-# Зацикливание функции
+# CEILING PORTAL DETECT
+execute positioned ^ ^-1.15 ^0.5 if entity @s[tag=floor,tag=funnel_emitter,tag=N] if entity @e[type=minecraft:armor_stand,distance=..0.5,tag=sbpg.portal,tag=ceiling,tag=north] run function excursion_funnel:create/orange/y/portals
+execute positioned ^ ^0.85 ^0.5 if entity @s[tag=floor,tag=funnel_emitter,tag=N] if entity @e[type=minecraft:armor_stand,distance=..0.5,tag=sbpg.portal,tag=ceiling,tag=south] run function excursion_funnel:create/orange/y/portals
+execute positioned ^ ^0.85 ^0.5 if entity @s[tag=floor,tag=funnel_emitter,tag=S] if entity @e[type=minecraft:armor_stand,distance=..0.5,tag=sbpg.portal,tag=ceiling,tag=north] run function excursion_funnel:create/orange/y/portals
+execute positioned ^ ^-1.15 ^0.5 if entity @s[tag=floor,tag=funnel_emitter,tag=S] if entity @e[type=minecraft:armor_stand,distance=..0.5,tag=sbpg.portal,tag=ceiling,tag=south] run function excursion_funnel:create/orange/y/portals
+execute positioned ^ ^-1.15 ^0.5 if entity @s[tag=floor,tag=funnel_emitter,tag=E] if entity @e[type=minecraft:armor_stand,distance=..0.5,tag=sbpg.portal,tag=ceiling,tag=east] run function excursion_funnel:create/orange/y/portals
+execute positioned ^ ^0.85 ^0.5 if entity @s[tag=floor,tag=funnel_emitter,tag=E] if entity @e[type=minecraft:armor_stand,distance=..0.5,tag=sbpg.portal,tag=ceiling,tag=west] run function excursion_funnel:create/orange/y/portals
+execute positioned ^ ^0.85 ^0.5 if entity @s[tag=floor,tag=funnel_emitter,tag=W] if entity @e[type=minecraft:armor_stand,distance=..0.5,tag=sbpg.portal,tag=ceiling,tag=east] run function excursion_funnel:create/orange/y/portals
+execute positioned ^ ^-1.15 ^0.5 if entity @s[tag=floor,tag=funnel_emitter,tag=W] if entity @e[type=minecraft:armor_stand,distance=..0.5,tag=sbpg.portal,tag=ceiling,tag=west] run function excursion_funnel:create/orange/y/portals
+
+
+
+# CEILING PORTAL DETECT
+execute positioned ^ ^-1.15 ^1.5 if entity @s[tag=ceiling,tag=funnel_emitter,tag=N] if entity @e[type=minecraft:armor_stand,distance=..0.5,tag=sbpg.portal,tag=floor,tag=north] run function excursion_funnel:create/orange/y/portals
+execute positioned ^ ^0.85 ^1.5 if entity @s[tag=ceiling,tag=funnel_emitter,tag=N] if entity @e[type=minecraft:armor_stand,distance=..0.5,tag=sbpg.portal,tag=floor,tag=south] run function excursion_funnel:create/orange/y/portals
+execute positioned ^ ^0.85 ^1.5 if entity @s[tag=ceiling,tag=funnel_emitter,tag=S] if entity @e[type=minecraft:armor_stand,distance=..0.5,tag=sbpg.portal,tag=floor,tag=north] run function excursion_funnel:create/orange/y/portals
+execute positioned ^ ^-1.15 ^1.5 if entity @s[tag=ceiling,tag=funnel_emitter,tag=S] if entity @e[type=minecraft:armor_stand,distance=..0.5,tag=sbpg.portal,tag=floor,tag=south] run function excursion_funnel:create/orange/y/portals
+execute positioned ^ ^-1.15 ^1.5 if entity @s[tag=ceiling,tag=funnel_emitter,tag=E] if entity @e[type=minecraft:armor_stand,distance=..0.5,tag=sbpg.portal,tag=floor,tag=east] run function excursion_funnel:create/orange/y/portals
+execute positioned ^ ^0.85 ^1.5 if entity @s[tag=ceiling,tag=funnel_emitter,tag=E] if entity @e[type=minecraft:armor_stand,distance=..0.5,tag=sbpg.portal,tag=floor,tag=west] run function excursion_funnel:create/orange/y/portals
+execute positioned ^ ^0.85 ^1.5 if entity @s[tag=ceiling,tag=funnel_emitter,tag=W] if entity @e[type=minecraft:armor_stand,distance=..0.5,tag=sbpg.portal,tag=floor,tag=east] run function excursion_funnel:create/orange/y/portals
+execute positioned ^ ^-1.15 ^1.5 if entity @s[tag=ceiling,tag=funnel_emitter,tag=W] if entity @e[type=minecraft:armor_stand,distance=..0.5,tag=sbpg.portal,tag=floor,tag=west] run function excursion_funnel:create/orange/y/portals
+
+
+
+
+
+
+
+
+
+
+
+
 execute if block ^ ^ ^1 #excursion_funnel:excursion_funnel_air if entity @s[scores={Distance_funnel=..100}] positioned ~ ~-1 ~ unless entity @e[distance=..1,tag=excursion_funnel_stop] positioned ~ ~1 ~ positioned ^ ^ ^1 run function excursion_funnel:create/orange/y/raycast_loop

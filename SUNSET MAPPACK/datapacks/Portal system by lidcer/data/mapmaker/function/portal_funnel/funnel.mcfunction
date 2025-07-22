@@ -33,15 +33,43 @@ execute as @a[tag=funnel_setup,nbt={SelectedItem:{id:"minecraft:carrot_on_a_stic
 execute as @e[type=minecraft:item_display,tag=funnel_set] run tp @s @p[tag=funnel_setup]
 
 
-execute as @e[type=minecraft:item_display,tag=funnel_set] at @p[tag=funnel_setup,tag=S] run tp @s ^ ^3 ^4.5 0 0
-execute as @e[type=minecraft:item_display,tag=funnel_set] at @p[tag=funnel_setup,tag=N] run tp @s ^ ^3 ^4.5 -180 0
-execute as @e[type=minecraft:item_display,tag=funnel_set] at @p[tag=funnel_setup,tag=E] run tp @s ^ ^3 ^4.5 -90 0
-execute as @e[type=minecraft:item_display,tag=funnel_set] at @p[tag=funnel_setup,tag=W] run tp @s ^ ^3 ^4.5 90 0
+
+#STENI
+execute as @e[type=minecraft:item_display,tag=funnel_set] at @s at @p[tag=funnel_setup,x_rotation=-60..60] run tag @s remove floor
+execute as @e[type=minecraft:item_display,tag=funnel_set] at @s at @p[tag=funnel_setup,x_rotation=-60..60] run tag @s remove ceiling
 
 
-execute as @e[type=minecraft:item_display,tag=funnel_set] at @s align xyz run tp @s ~0.5 ~-0.25 ~0.5
+execute as @e[type=minecraft:item_display,tag=funnel_set] at @p[tag=funnel_setup,tag=S,x_rotation=-60..60] run tp @s ^ ^3 ^4.5 0 0
+execute as @e[type=minecraft:item_display,tag=funnel_set] at @p[tag=funnel_setup,tag=N,x_rotation=-60..60] run tp @s ^ ^3 ^4.5 -180 0
+execute as @e[type=minecraft:item_display,tag=funnel_set] at @p[tag=funnel_setup,tag=E,x_rotation=-60..60] run tp @s ^ ^3 ^4.5 -90 0
+execute as @e[type=minecraft:item_display,tag=funnel_set] at @p[tag=funnel_setup,tag=W,x_rotation=-60..60] run tp @s ^ ^3 ^4.5 90 0
+execute as @e[type=minecraft:item_display,tag=funnel_set] at @s if entity @p[tag=funnel_setup,x_rotation=-60..60] align xyz run tp @s ~0.5 ~-0.25 ~0.5
+execute as @e[type=minecraft:item_display,tag=funnel_set] at @s if entity @p[tag=funnel_setup,x_rotation=-60..60] run tp @s ^ ^ ^-0.29
 
-execute as @e[type=minecraft:item_display,tag=funnel_set] at @s run tp @s ^ ^ ^-0.29
+
+#DAUN
+execute as @e[type=minecraft:item_display,tag=funnel_set] at @s at @p[tag=funnel_setup,x_rotation=60..90] run tag @s add floor
+execute as @e[type=minecraft:item_display,tag=funnel_set] at @s at @p[tag=funnel_setup,x_rotation=60..90] run tag @s remove ceiling
+
+execute as @e[type=minecraft:item_display,tag=funnel_set] at @s at @p[tag=funnel_setup,tag=S,x_rotation=60..90] run tp @s ^ ^3 ^4.5 0 89.9
+execute as @e[type=minecraft:item_display,tag=funnel_set] at @s at @p[tag=funnel_setup,tag=N,x_rotation=60..90] run tp @s ^ ^3 ^4.5 -180 89.9
+execute as @e[type=minecraft:item_display,tag=funnel_set] at @s at @p[tag=funnel_setup,tag=E,x_rotation=60..90] run tp @s ^ ^3 ^4.5 -90 89.9
+execute as @e[type=minecraft:item_display,tag=funnel_set] at @s at @p[tag=funnel_setup,tag=W,x_rotation=60..90] run tp @s ^ ^3 ^4.5 90 89.9
+execute as @e[type=minecraft:item_display,tag=funnel_set] at @s if entity @p[tag=funnel_setup,x_rotation=60..90] align xyz run tp @s ~0.5 ~-0.25 ~0.5
+execute as @e[type=minecraft:item_display,tag=funnel_set] at @s if entity @p[tag=funnel_setup,x_rotation=60..90] run tp @s ^ ^0.2 ^-0.03
+
+#UP
+execute as @e[type=minecraft:item_display,tag=funnel_set] at @s at @p[tag=funnel_setup,x_rotation=-90..-60] run tag @s remove floor
+execute as @e[type=minecraft:item_display,tag=funnel_set] at @s at @p[tag=funnel_setup,x_rotation=-90..-60] run tag @s add ceiling
+
+execute as @e[type=minecraft:item_display,tag=funnel_set] at @s at @p[tag=funnel_setup,tag=S,x_rotation=-90..-60] run tp @s ^ ^3 ^4.5 0 -89.9
+execute as @e[type=minecraft:item_display,tag=funnel_set] at @s at @p[tag=funnel_setup,tag=N,x_rotation=-90..-60] run tp @s ^ ^3 ^4.5 -180 -89.9
+execute as @e[type=minecraft:item_display,tag=funnel_set] at @s at @p[tag=funnel_setup,tag=E,x_rotation=-90..-60] run tp @s ^ ^3 ^4.5 -90 -89.9
+execute as @e[type=minecraft:item_display,tag=funnel_set] at @s at @p[tag=funnel_setup,tag=W,x_rotation=-90..-60] run tp @s ^ ^3 ^4.5 90 -89.9
+execute as @e[type=minecraft:item_display,tag=funnel_set] at @s if entity @p[tag=funnel_setup,x_rotation=-90..-60] align xyz run tp @s ~0.5 ~-0.25 ~0.5
+execute as @e[type=minecraft:item_display,tag=funnel_set] at @s if entity @p[tag=funnel_setup,x_rotation=-90..-60] run tp @s ^ ^0.2 ^0.46
+
+
 
 
 

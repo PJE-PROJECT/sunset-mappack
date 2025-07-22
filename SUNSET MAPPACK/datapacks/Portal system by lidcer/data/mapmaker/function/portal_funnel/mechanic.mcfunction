@@ -9,7 +9,6 @@ execute positioned ~ ~-0.9 ~ if entity @e[type=glow_item_frame,tag=indicator,tag
 
 execute if block ^ ^ ^1 redstone_block run function mapmaker:portal_funnel/active1
 execute if block ^ ^-1 ^1 redstone_block run function mapmaker:portal_funnel/active2
-
 execute unless block ^ ^ ^1 redstone_block run function mapmaker:portal_funnel/unactive1
 execute unless block ^ ^-1 ^1 redstone_block run function mapmaker:portal_funnel/unactive2
 
