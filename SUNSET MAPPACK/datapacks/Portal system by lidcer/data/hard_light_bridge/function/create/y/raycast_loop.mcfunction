@@ -1,7 +1,9 @@
-# Добавить единичку в счёт Distance
+
 scoreboard players add @s Distance 1
 scoreboard players add @s Distance_bridge 1
-#Создание моста
+
+
+
 
 execute if block ^ ^-1 ^ #hard_light_bridge:hard_light_bridge_air if entity @s[tag=floor,tag=south] run setblock ^ ^ ^ minecraft:iron_trapdoor[open=true,facing=north]
 execute unless entity @e[type=minecraft:glow_item_frame,distance=..0.7,tag=hard_light_bridge,tag=hard_light_bridge_y,tag=south] if entity @s[tag=floor,tag=south] if score @s Distance_bridge matches 1 run summon minecraft:glow_item_frame ~ ~ ~ {Facing:2,Fixed:1b,Invisible:1b,Item:{id:"minecraft:white_stained_glass_pane",components:{"minecraft:custom_model_data":64},count:1},Tags:["hard_light_bridge","hard_light_bridge_y","south"]}

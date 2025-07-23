@@ -1,10 +1,7 @@
-# Добавить единичку в счёт Distance
+
 scoreboard players add @s Distance 1
 scoreboard players add @s Distance_bridge 1
 
-#Создание моста
-
-#execute if block ~ ~-1 ~ #hard_light_bridge:hard_light_bridge_air unless block ~ ~-1 ~ barrier if entity @s[tag=!floor,tag=!ceiling,tag=!45_portal] run setblock ~ ~-1 ~ iron_trapdoor[open=false,half=top]
 
 execute if block ~ ~-1 ~ #hard_light_bridge:hard_light_bridge_air unless block ~ ~-1 ~ minecraft:barrier if entity @s[tag=!floor,tag=!ceiling,tag=!45_portal] run setblock ~ ~-1 ~ minecraft:dark_oak_slab[type=top]
 
@@ -34,12 +31,10 @@ execute unless entity @e[type=minecraft:glow_item_frame,distance=..1,tag=hard_li
 
 execute if score @s Distance_bridge matches 2 run scoreboard players set @s Distance_bridge 0
 
-# Проверка что луч столкнулся с каким-то блоком
 execute unless block ^ ^ ^1 #hard_light_bridge:hard_light_bridge_air if entity @s[scores={Distance=..100}] positioned ^ ^ ^ run function hard_light_bridge:create/horizontal/raycast_end
-# Проверка что луч столкнулся с какой-то сущностью
+
 execute positioned ~ ~-1 ~ if entity @e[distance=..1,tag=hard_light_bridge_stop] positioned ~ ~1 ~ run function hard_light_bridge:create/horizontal/raycast_end
-# Проверка что луч ни с чем не столкнулся и сработало ограничение дистанции
+
 execute if entity @s[scores={Distance=100}] positioned ^ ^ ^-0.5 run function hard_light_bridge:create/horizontal/raycast_end
 
-# Зацикливание функции
 execute if block ^ ^ ^1 #hard_light_bridge:hard_light_bridge_air if entity @s[scores={Distance=..100}] positioned ~ ~-1 ~ unless entity @e[distance=..1,tag=hard_light_bridge_stop] positioned ~ ~1 ~ positioned ^ ^ ^1 run function hard_light_bridge:create/horizontal/raycast_loop

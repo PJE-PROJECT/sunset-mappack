@@ -16,8 +16,14 @@ execute unless entity @e[tag=sbpg.portal_first,limit=1] if entity @e[tag=sbpg.po
 execute at @e[tag=sbpg.portal,tag=sbpg.portal_main,tag=!floor,tag=!45_portal,tag=!ceiling,limit=2] if block ^ ^ ^0.5 #portal:portal_gate_enter_block run tag @e[tag=portable] remove portable
 execute at @e[tag=sbpg.portal,tag=sbpg.portal_main,tag=!floor,tag=!45_portal,tag=!ceiling,limit=2] if block ^ ^1 ^0.5 #portal:portal_gate_enter_block run tag @e[tag=portable] remove portable
 
-execute at @e[tag=sbpg.portal,tag=sbpg.portal_main,tag=floor,limit=2] if block ^ ^ ^2 #portal:portal_gate_enter_block run tag @e[tag=portable] remove portable
-execute at @e[tag=sbpg.portal,tag=sbpg.portal_main,tag=floor,limit=2] if block ^ ^-1 ^2 #portal:portal_gate_enter_block run tag @e[tag=portable] remove portable
+
+
+execute at @e[tag=sbpg.portal,tag=sbpg.portal_main,tag=floor,limit=2,tag=!north,tag=!west] if block ^ ^ ^2 #portal:portal_gate_enter_block run tag @e[tag=portable] remove portable
+execute at @e[tag=sbpg.portal,tag=sbpg.portal_main,tag=floor,limit=2,tag=!north,tag=!west] if block ^ ^-1 ^2 #portal:portal_gate_enter_block run tag @e[tag=portable] remove portable
+
+execute at @e[tag=sbpg.portal,tag=sbpg.portal_main,tag=floor,limit=2,tag=!south,tag=!east] if block ^ ^0.5 ^2 #portal:portal_gate_enter_block run tag @e[tag=portable] remove portable
+execute at @e[tag=sbpg.portal,tag=sbpg.portal_main,tag=floor,limit=2,tag=!south,tag=!east] if block ^ ^-0.5 ^2 #portal:portal_gate_enter_block run tag @e[tag=portable] remove portable
+
 
 execute at @e[tag=sbpg.portal,tag=sbpg.portal_main,tag=ceiling,limit=2] if block ^ ^-0.5 ^-1 #portal:portal_gate_enter_block run tag @e[tag=portable] remove portable
 execute at @e[tag=sbpg.portal,tag=sbpg.portal_main,tag=ceiling,limit=2] if block ^ ^-1.5 ^-1 #portal:portal_gate_enter_block run tag @e[tag=portable] remove portable

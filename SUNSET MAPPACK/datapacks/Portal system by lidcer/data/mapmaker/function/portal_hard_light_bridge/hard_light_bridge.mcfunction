@@ -23,25 +23,91 @@ execute as @a[tag=hard_light_bridge_setup,nbt={SelectedItem:{id:"minecraft:carro
 execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @p[tag=hard_light_bridge_setup] run tp @s @p[tag=hard_light_bridge_setup]
 execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @p[tag=hard_light_bridge_setup] run tp @s @p[tag=hard_light_bridge_setup]
 
-execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @p[tag=hard_light_bridge_setup,tag=N] run tp @s ^ ^1 ^2 0 0
-execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @p[tag=hard_light_bridge_setup,tag=S] run tp @s ^ ^1 ^2 -180 0
-execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @p[tag=hard_light_bridge_setup,tag=E] run tp @s ^ ^1 ^2 90 0
-execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @p[tag=hard_light_bridge_setup,tag=W] run tp @s ^ ^1 ^2 -90 0
+# STENI
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @p[tag=hard_light_bridge_setup,x_rotation=-60..60] run tag @s remove floor
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @p[tag=hard_light_bridge_setup,x_rotation=-60..60] run tag @s remove ceiling
 
-execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @p[tag=hard_light_bridge_setup,tag=N] run tp @s ^ ^1 ^2 0 0
-execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @p[tag=hard_light_bridge_setup,tag=S] run tp @s ^ ^1 ^2 -180 0
-execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @p[tag=hard_light_bridge_setup,tag=E] run tp @s ^ ^1 ^2 90 0
-execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @p[tag=hard_light_bridge_setup,tag=W] run tp @s ^ ^1 ^2 -90 0
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @p[tag=hard_light_bridge_setup,x_rotation=-60..60] run tag @s remove floor
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @p[tag=hard_light_bridge_setup,x_rotation=-60..60] run tag @s remove ceiling
 
-execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @s if entity @p[tag=hard_light_bridge_setup,tag=N] align xyz run tp @s ~0.5 ~-0.5 ~0.3
-execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @s if entity @p[tag=hard_light_bridge_setup,tag=S] align xyz run tp @s ~0.5 ~-0.5 ~0.7
-execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @s if entity @p[tag=hard_light_bridge_setup,tag=E] align xyz run tp @s ~0.7 ~-0.5 ~0.5
-execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @s if entity @p[tag=hard_light_bridge_setup,tag=W] align xyz run tp @s ~0.3 ~-0.5 ~0.5
 
-execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @s if entity @p[tag=hard_light_bridge_setup,tag=N] align xyz run tp @s ~0.5 ~-0.5 ~0.3
-execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @s if entity @p[tag=hard_light_bridge_setup,tag=S] align xyz run tp @s ~0.5 ~-0.5 ~0.7
-execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @s if entity @p[tag=hard_light_bridge_setup,tag=E] align xyz run tp @s ~0.7 ~-0.5 ~0.5
-execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @s if entity @p[tag=hard_light_bridge_setup,tag=W] align xyz run tp @s ~0.3 ~-0.5 ~0.5
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @p[tag=hard_light_bridge_setup,tag=N,x_rotation=-60..60] run tp @s ^ ^1 ^2 0 0
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @p[tag=hard_light_bridge_setup,tag=S,x_rotation=-60..60] run tp @s ^ ^1 ^2 -180 0
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @p[tag=hard_light_bridge_setup,tag=E,x_rotation=-60..60] run tp @s ^ ^1 ^2 90 0
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @p[tag=hard_light_bridge_setup,tag=W,x_rotation=-60..60] run tp @s ^ ^1 ^2 -90 0
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @p[tag=hard_light_bridge_setup,tag=N,x_rotation=-60..60] run tp @s ^ ^1 ^2 0 0
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @p[tag=hard_light_bridge_setup,tag=S,x_rotation=-60..60] run tp @s ^ ^1 ^2 -180 0
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @p[tag=hard_light_bridge_setup,tag=E,x_rotation=-60..60] run tp @s ^ ^1 ^2 90 0
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @p[tag=hard_light_bridge_setup,tag=W,x_rotation=-60..60] run tp @s ^ ^1 ^2 -90 0
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @s if entity @p[tag=hard_light_bridge_setup,tag=N,x_rotation=-60..60] align xyz run tp @s ~0.5 ~-0.5 ~0.3
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @s if entity @p[tag=hard_light_bridge_setup,tag=S,x_rotation=-60..60] align xyz run tp @s ~0.5 ~-0.5 ~0.7
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @s if entity @p[tag=hard_light_bridge_setup,tag=E,x_rotation=-60..60] align xyz run tp @s ~0.7 ~-0.5 ~0.5
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @s if entity @p[tag=hard_light_bridge_setup,tag=W,x_rotation=-60..60] align xyz run tp @s ~0.3 ~-0.5 ~0.5
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @s if entity @p[tag=hard_light_bridge_setup,tag=N,x_rotation=-60..60] align xyz run tp @s ~0.5 ~-0.5 ~0.3
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @s if entity @p[tag=hard_light_bridge_setup,tag=S,x_rotation=-60..60] align xyz run tp @s ~0.5 ~-0.5 ~0.7
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @s if entity @p[tag=hard_light_bridge_setup,tag=E,x_rotation=-60..60] align xyz run tp @s ~0.7 ~-0.5 ~0.5
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @s if entity @p[tag=hard_light_bridge_setup,tag=W,x_rotation=-60..60] align xyz run tp @s ~0.3 ~-0.5 ~0.5
+
+
+#FLOOR
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @p[tag=hard_light_bridge_setup,x_rotation=60..90] run tag @s add floor
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @p[tag=hard_light_bridge_setup,x_rotation=60..90] run tag @s remove ceiling
+
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @p[tag=hard_light_bridge_setup,x_rotation=60..90] run tag @s add floor
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @p[tag=hard_light_bridge_setup,x_rotation=60..90] run tag @s remove ceiling
+
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @p[tag=hard_light_bridge_setup,tag=N,x_rotation=60..90] run tp @s ^ ^1 ^1 0 -90
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @p[tag=hard_light_bridge_setup,tag=S,x_rotation=60..90] run tp @s ^ ^1 ^1 -180 -90
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @p[tag=hard_light_bridge_setup,tag=E,x_rotation=60..90] run tp @s ^ ^1 ^1 90 -90
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @p[tag=hard_light_bridge_setup,tag=W,x_rotation=60..90] run tp @s ^ ^1 ^1 -90 -90
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @p[tag=hard_light_bridge_setup,tag=N,x_rotation=60..90] run tp @s ^ ^1 ^1 0 -90
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @p[tag=hard_light_bridge_setup,tag=S,x_rotation=60..90] run tp @s ^ ^1 ^1 -180 -90
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @p[tag=hard_light_bridge_setup,tag=E,x_rotation=60..90] run tp @s ^ ^1 ^1 90 -90
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @p[tag=hard_light_bridge_setup,tag=W,x_rotation=60..90] run tp @s ^ ^1 ^1 -90 -90
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @s if entity @p[tag=hard_light_bridge_setup,tag=N,x_rotation=60..90] align xyz run tp @s ~0.5 ~-0.5 ~0.3
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @s if entity @p[tag=hard_light_bridge_setup,tag=S,x_rotation=60..90] align xyz run tp @s ~0.5 ~-0.5 ~0.7
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @s if entity @p[tag=hard_light_bridge_setup,tag=E,x_rotation=60..90] align xyz run tp @s ~0.7 ~-0.5 ~0.5
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @s if entity @p[tag=hard_light_bridge_setup,tag=W,x_rotation=60..90] align xyz run tp @s ~0.3 ~-0.5 ~0.5
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @s if entity @p[tag=hard_light_bridge_setup,tag=N,x_rotation=60..90] align xyz run tp @s ~0.5 ~-0.5 ~0.3
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @s if entity @p[tag=hard_light_bridge_setup,tag=S,x_rotation=60..90] align xyz run tp @s ~0.5 ~-0.5 ~0.7
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @s if entity @p[tag=hard_light_bridge_setup,tag=E,x_rotation=60..90] align xyz run tp @s ~0.7 ~-0.5 ~0.5
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @s if entity @p[tag=hard_light_bridge_setup,tag=W,x_rotation=60..90] align xyz run tp @s ~0.3 ~-0.5 ~0.5
+
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @s if entity @p[tag=hard_light_bridge_setup,x_rotation=60..90] run tp @s ^ ^-0.1 ^-0.2
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @s if entity @p[tag=hard_light_bridge_setup,x_rotation=60..90] run tp @s ^ ^-0.1 ^-0.2
+
+
+
+#CEILING
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @p[tag=hard_light_bridge_setup,x_rotation=-90..-60] run tag @s remove floor
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @p[tag=hard_light_bridge_setup,x_rotation=-90..-60] run tag @s add ceiling
+
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @p[tag=hard_light_bridge_setup,x_rotation=-90..-60] run tag @s remove floor
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @p[tag=hard_light_bridge_setup,x_rotation=-90..-60] run tag @s add ceiling
+
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @p[tag=hard_light_bridge_setup,tag=N,x_rotation=-90..-60] run tp @s ^ ^1 ^3 0 90
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @p[tag=hard_light_bridge_setup,tag=S,x_rotation=-90..-60] run tp @s ^ ^1 ^3 -180 90
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @p[tag=hard_light_bridge_setup,tag=E,x_rotation=-90..-60] run tp @s ^ ^1 ^3 90 90
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @p[tag=hard_light_bridge_setup,tag=W,x_rotation=-90..-60] run tp @s ^ ^1 ^3 -90 90
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @p[tag=hard_light_bridge_setup,tag=N,x_rotation=-90..-60] run tp @s ^ ^1 ^3 0 90
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @p[tag=hard_light_bridge_setup,tag=S,x_rotation=-90..-60] run tp @s ^ ^1 ^3 -180 90
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @p[tag=hard_light_bridge_setup,tag=E,x_rotation=-90..-60] run tp @s ^ ^1 ^3 90 90
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @p[tag=hard_light_bridge_setup,tag=W,x_rotation=-90..-60] run tp @s ^ ^1 ^3 -90 90
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @s if entity @p[tag=hard_light_bridge_setup,tag=N,x_rotation=-90..-60] align xyz run tp @s ~0.5 ~-0.5 ~0.3
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @s if entity @p[tag=hard_light_bridge_setup,tag=S,x_rotation=-90..-60] align xyz run tp @s ~0.5 ~-0.5 ~0.7
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @s if entity @p[tag=hard_light_bridge_setup,tag=E,x_rotation=-90..-60] align xyz run tp @s ~0.7 ~-0.5 ~0.5
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @s if entity @p[tag=hard_light_bridge_setup,tag=W,x_rotation=-90..-60] align xyz run tp @s ~0.3 ~-0.5 ~0.5
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @s if entity @p[tag=hard_light_bridge_setup,tag=N,x_rotation=-90..-60] align xyz run tp @s ~0.5 ~-0.5 ~0.3
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @s if entity @p[tag=hard_light_bridge_setup,tag=S,x_rotation=-90..-60] align xyz run tp @s ~0.5 ~-0.5 ~0.7
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @s if entity @p[tag=hard_light_bridge_setup,tag=E,x_rotation=-90..-60] align xyz run tp @s ~0.7 ~-0.5 ~0.5
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @s if entity @p[tag=hard_light_bridge_setup,tag=W,x_rotation=-90..-60] align xyz run tp @s ~0.3 ~-0.5 ~0.5
+
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c] at @s if entity @p[tag=hard_light_bridge_setup,x_rotation=-90..-60] run tp @s ^ ^-0.1 ^-0.2
+execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r] at @s if entity @p[tag=hard_light_bridge_setup,x_rotation=-90..-60] run tp @s ^ ^-0.1 ^-0.2
+
+
+
+
 
 
 
@@ -56,4 +122,19 @@ execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c_set] run
 
 execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_r_set] run tag @s remove hard_light_bridge_setup_r
 execute as @e[type=minecraft:item_display,tag=hard_light_bridge_setup_c_set] run tag @s remove hard_light_bridge_setup_c
-execute as @e[tag=hard_light_bridge_emitter] run data merge entity @s {transformation:{translation:[0.0f,-0.11f,0.0f]}}
+execute as @e[tag=hard_light_bridge_emitter,tag=!floor,tag=!ceiling] run data merge entity @s {transformation:{translation:[0.0f,-0.11f,0.0f]}}
+execute as @e[tag=hard_light_bridge_emitter,tag=floor] run data merge entity @s {transformation:{translation:[0.0f,-0.215f,0.0f]}}
+execute as @e[tag=hard_light_bridge_emitter,tag=ceiling] run data merge entity @s {transformation:{translation:[0.0f,0.185f,0.0f]}}
+
+# TAGS (BACKPORT COMPABILITY)
+
+execute as @e[tag=hard_light_bridge_emitter] run tag @s remove north
+execute as @e[tag=hard_light_bridge_emitter] run tag @s remove south
+execute as @e[tag=hard_light_bridge_emitter] run tag @s remove east
+execute as @e[tag=hard_light_bridge_emitter] run tag @s remove west
+
+
+execute as @e[tag=hard_light_bridge_emitter,tag=N] run tag @s add north
+execute as @e[tag=hard_light_bridge_emitter,tag=S] run tag @s add south
+execute as @e[tag=hard_light_bridge_emitter,tag=E] run tag @s add east
+execute as @e[tag=hard_light_bridge_emitter,tag=W] run tag @s add west
