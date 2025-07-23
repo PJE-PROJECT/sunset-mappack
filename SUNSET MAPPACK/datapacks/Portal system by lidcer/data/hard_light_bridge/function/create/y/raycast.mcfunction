@@ -19,7 +19,7 @@ execute if entity @s[tag=ceiling,tag=sbpg.portal,tag=west] positioned ~ ~1 ~ pos
 
 ## HARD LIGHT BRIDGE EMITTER
 #FLOOR
-execute if entity @s[tag=floor,tag=hard_light_bridge_emitter,tag=north] align xyz positioned ~ ~2.5 ~ positioned ^ ^1 ^1 run function hard_light_bridge:create/y/raycast_loop
+execute if entity @s[tag=floor,tag=hard_light_bridge_emitter,tag=north] align xyz positioned ~ ~2.5 ~ positioned ^ ^0.99 ^1 run function hard_light_bridge:create/y/raycast_loop
 execute if entity @s[tag=floor,tag=hard_light_bridge_emitter,tag=south] align xyz positioned ~ ~2.5 ~ positioned ^ ^ ^1 run function hard_light_bridge:create/y/raycast_loop
 execute if entity @s[tag=floor,tag=hard_light_bridge_emitter,tag=west] align xyz positioned ~ ~2.5 ~ positioned ^ ^ ^1 run function hard_light_bridge:create/y/raycast_loop
 execute if entity @s[tag=floor,tag=hard_light_bridge_emitter,tag=east] align xyz positioned ~ ~2.5 ~ positioned ^ ^ ^1 run function hard_light_bridge:create/y/raycast_loop
