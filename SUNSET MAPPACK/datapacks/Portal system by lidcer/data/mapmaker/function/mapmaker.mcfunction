@@ -36,7 +36,7 @@ execute if entity @a[tag=elevator_setup,limit=1] run function mapmaker:portal_el
 #LASER EMITTER
 execute if entity @a[tag=laser_emitter_c_setup,limit=1] run function mapmaker:portal_laser_emitter/laser_emitter
 execute if entity @a[tag=laser_emitter_r_setup,limit=1] run function mapmaker:portal_laser_emitter/laser_emitter
-execute as @e[type=minecraft:armor_stand,distance=..40,tag=laser_emitter,tag=!useless] at @s run function mapmaker:portal_laser_emitter/laser_emitter-mechanic
+execute as @e[type=minecraft:item_display,distance=..40,tag=laser_emitter,tag=!useless] at @s run function mapmaker:portal_laser_emitter/laser_emitter-mechanic
 
 #LASER CATCHER
 execute if entity @a[tag=laser_catcher_setup,limit=1] run function mapmaker:portal_laser_catcher/laser_catcher

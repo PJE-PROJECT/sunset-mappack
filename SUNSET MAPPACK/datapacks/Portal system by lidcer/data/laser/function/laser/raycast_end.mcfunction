@@ -28,5 +28,5 @@ execute as @e[type=minecraft:marker,tag=laser_end,sort=nearest,limit=1] if score
 
 execute unless entity @e[distance=..1,tag=sbpg.portal] run tag @s remove portal_raycaster
 
-execute unless entity @e[distance=..0.8,tag=sbpg.portal,tag=sbpg.active] unless entity @e[distance=..1,tag=laser_cube] unless entity @e[distance=..1,tag=laser_catcher] if entity @s[tag=laser_emitter] positioned ~ ~0.35 ~ run function laser:laser/effects
+execute unless entity @e[distance=..0.8,tag=sbpg.portal,tag=sbpg.active] unless entity @e[distance=..1,tag=laser_cube] unless entity @e[distance=..1,tag=laser_catcher] if entity @s[tag=laser_emitter] positioned ^ ^0.35 ^ run function laser:laser/effects
 execute unless entity @e[distance=..0.8,tag=sbpg.portal,tag=sbpg.active] unless entity @e[distance=..1,tag=laser_cube] unless entity @e[distance=..1,tag=laser_catcher] unless entity @s[tag=laser_emitter] run function laser:laser/effects

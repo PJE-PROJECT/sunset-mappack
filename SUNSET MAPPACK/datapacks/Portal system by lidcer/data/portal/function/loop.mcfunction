@@ -185,7 +185,7 @@ execute if entity @e[tag=sbpg.portal,limit=1] run function portal:portals
 
 #Lasers
 execute as @e[type=minecraft:armor_stand,tag=laser_cube,tag=laser_cube_new,sort=random,limit=1] run function laser:setup
-execute as @e[type=minecraft:armor_stand,tag=laser_emitter,tag=laser_emitter_new,sort=random,limit=1] run function laser:setup
+execute as @e[type=minecraft:item_display,tag=laser_emitter,tag=laser_emitter_new,sort=random,limit=1] run function laser:setup
 #Indicators
 execute if score indicators_setup timer matches 1.. run function portal:indicators_setup
 execute if score indicators_setup timer matches 1.. run scoreboard players remove indicators_setup timer 1
