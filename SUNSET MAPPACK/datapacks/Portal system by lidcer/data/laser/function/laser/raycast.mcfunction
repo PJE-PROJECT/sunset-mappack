@@ -1,4 +1,3 @@
-# Дать тег сущности относительно которой запущена эта функция
 
 tag @s add laser_raycaster
 execute as @e[type=minecraft:item_display,tag=laser] if score @s laser_ID = @e[tag=laser_raycaster,sort=random,limit=1] laser_ID store result entity @s transformation.scale[2] float 0.965 run scoreboard players get @e[tag=laser_raycaster,sort=random,limit=1] Distance
@@ -13,7 +12,6 @@ execute unless entity @e[type=minecraft:item_display,distance=..0.1,tag=laser,ta
 
 scoreboard players operation @e[type=minecraft:item_display,distance=..0.1,tag=laser_new,limit=1] laser_ID = @s laser_ID
 tag @e[type=minecraft:item_display,distance=..0.1,tag=laser_new,limit=1] remove laser_new
-# Запустить следующую функцию - raycast_loop
+
 execute positioned ^ ^ ^ run function laser:laser/raycast_loop
 tag @s remove laser_raycaster
-#execute if entity @s[tag=laser_cube] run tag @s remove active

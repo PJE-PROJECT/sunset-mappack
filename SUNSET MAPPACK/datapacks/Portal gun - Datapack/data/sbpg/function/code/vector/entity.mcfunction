@@ -1,15 +1,4 @@
 
-# En
-## Rotation of the entity from whom the function is executed — input data
-## Output data:
-### /scoreboard players get #Vec.AXIS math
-
-# Ru
-## Поворот сущности, от которой исполняется функция — входные данные
-## Выходные данные:
-### /scoreboard players get #Vec.AXIS math
-
-
 
 data modify storage midwut:main Rotation set from entity @s Rotation
 execute store result score #Rotation.Y main_score run data get storage midwut:main Rotation[0] 1000

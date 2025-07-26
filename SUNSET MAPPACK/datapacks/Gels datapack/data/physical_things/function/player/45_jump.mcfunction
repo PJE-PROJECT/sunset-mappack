@@ -31,9 +31,7 @@ scoreboard players operation OUT:cos math /= #10 const
 scoreboard players operation *vec main_score *= #1000 const
 scoreboard players operation *vec main_score /= OUT:cos math
 
-#scoreboard players operation #x main_score = *vec main_score
-#scoreboard players operation #y main_score = *vec main_score
-#scoreboard players operation #z main_score = *vec main_score
+
 
 scoreboard players operation IN:arctg2.X math = #vz_ main_score
 scoreboard players operation IN:arctg2.Y math = #vx_ main_score
@@ -53,7 +51,6 @@ scoreboard players set *offset.pos_x main_score 0
 
 
 
-## cos & sin угла X
 scoreboard players set IN:angle math -10000
 scoreboard players set IN:angle math 0
 function midwut:help/math/trig_func/cos/cos
@@ -63,7 +60,7 @@ scoreboard players operation OUT:sin math /= #10 const
 scoreboard players operation *cos_x math = OUT:cos math
 scoreboard players operation *sin_x math = OUT:sin math
 
-## cos & sin угла Y
+
 scoreboard players operation IN:angle math = #type main_score
 scoreboard players set IN:angle math 0
 function midwut:help/math/trig_func/cos/cos
@@ -73,7 +70,6 @@ scoreboard players operation OUT:sin math /= #10 const
 scoreboard players operation *cos_y math = OUT:cos math
 scoreboard players operation *sin_y math = OUT:sin math
 
-## cos & sin угла Z
 scoreboard players set IN:angle math 0
 function midwut:help/math/trig_func/cos/cos
 function midwut:help/math/trig_func/sin/sin
@@ -83,14 +79,6 @@ scoreboard players operation *cos_z math = OUT:cos math
 scoreboard players operation *sin_z math = OUT:sin math
 
 
-## *cos_ math
-## *sin_ math
-
-
-#=========================================================
-
-###### Z
-## offset_z_ = cos -sin 0
 scoreboard players operation #test main_score = *offset.pos_z main_score
 scoreboard players operation #test main_score *= *cos_x math
 scoreboard players operation *offset_z_ main_score = #test main_score
@@ -99,26 +87,20 @@ scoreboard players operation #test main_score *= *sin_x math
 scoreboard players operation *offset_z_ main_score += #test main_score
 scoreboard players operation *offset_z_ main_score /= #1000 const
 
-## offset_y_ = sin cos 0
+
 scoreboard players operation *offset.pos_y main_score *= *cos_x math
 scoreboard players operation *offset_y_ main_score = *offset.pos_y main_score
 scoreboard players operation *offset.pos_z main_score *= *sin_x math
 scoreboard players operation *offset_y_ main_score -= *offset.pos_z main_score
 scoreboard players operation *offset_y_ main_score /= #1000 const
 
-## offset_x_ = 0 0 1
 scoreboard players operation *offset_x_ main_score = *offset.pos_x main_score
 
 
-###### X
-## 1 0 0        offset_z_
-## 0 cos -sin   offset_y_
-## 0 sin cos    offset_x_
 
 scoreboard players operation #test2 main_score = *offset_y_ main_score
 scoreboard players operation #test3 main_score = *offset_x_ main_score
 
-## offset_y_ = 0 cos -sin
 scoreboard players operation #test main_score = #test2 main_score
 scoreboard players operation #test main_score *= *cos_z math
 scoreboard players operation *offset_y_ main_score = #test main_score
@@ -135,10 +117,7 @@ scoreboard players operation *offset_x_ main_score += #test2 main_score
 scoreboard players operation *offset_x_ main_score /= #1000 const
 
 
-###### Y
-## cos 0 sin    offset_z_
-## 0 1 0        offset_y_
-## -sin 0 cos   offset_x_
+
 
 
 scoreboard players operation #test2 main_score = *offset_z_ main_score
@@ -165,9 +144,7 @@ scoreboard players operation *offset_x_ main_score /= #1000 const
 scoreboard players operation @s physical_things.mot_x = *offset_x_ main_score
 scoreboard players operation @s physical_things.mot_y = *offset_y_ main_score
 scoreboard players operation @s physical_things.mot_z = *offset_z_ main_score
-#scoreboard players operation @s physical_things.mot_x *= #3 const
-#scoreboard players operation @s physical_things.mot_y *= #3 const
-#scoreboard players operation @s physical_things.mot_z *= #3 const
+
 tp @e[type=minecraft:marker,tag=midwut.test_pos-s_entity,limit=1] ~ ~ ~
 execute store result score #x main_score run data get entity @e[type=minecraft:marker,tag=midwut.test_pos-s_entity,limit=1] Pos[0] 1000
 execute store result score #y main_score run data get entity @e[type=minecraft:marker,tag=midwut.test_pos-s_entity,limit=1] Pos[1] 1000
@@ -180,7 +157,4 @@ execute as @e[type=minecraft:marker,tag=midwut.test_pos-s_entity,limit=1] at @s 
 execute as @e[type=minecraft:marker,tag=midwut.test_pos-s_entity,limit=1] at @s facing entity @a feet run particle minecraft:dust{color:[1.0f,0.0f,0.0f],scale:3.0f} ^ ^ ^ 0 0 0 0 1 force
 execute as @e[type=minecraft:marker,tag=midwut.test_pos-s_entity,limit=1] at @s facing entity @a feet run particle minecraft:dust{color:[1.0f,0.0f,0.0f],scale:3.0f} ^ ^ ^-1 0 0 0 0 1 force
 execute as @e[type=minecraft:marker,tag=midwut.test_pos-s_entity,limit=1] at @s facing entity @a feet run particle minecraft:dust{color:[0.0f,0.0f,1.0f],scale:3.0f} ^ ^ ^-2 0 0 0 0 1 force
-
-#tellraw @a [{"score":{"name": "*offset_x_","objective": "main_score"}}," ",{"score":{"name": "*offset_y_","objective": "main_score"}}," ",{"score":{"name": "*offset_z_","objective": "main_score"}}]
-
 

@@ -1,24 +1,9 @@
-# En
-## Input data:
-### /scoreboard players get #Rotation.Y main_score
-### /scoreboard players get #Rotation.X main_score
-## Output data:
-### /scoreboard players get #Vec.AXIS math
-
-# Ru
-## Входные данные:
-### /scoreboard players get #Rotation.Y main_score
-### /scoreboard players get #Rotation.X main_score
-## Выходные данные:
-### /scoreboard players get #Vec.AXIS math
 
 
 execute if score #Rotation.Y main_score matches ..-1 run scoreboard players add #Rotation.Y main_score 360000
 execute if score #Rotation.X main_score matches ..-1 run scoreboard players add #Rotation.X main_score 360000
 
-#data modify storage midwut:main Rotation set from entity @s Rotation
-#execute store result score #Rotation.Y main_score run data get storage midwut:main Rotation[0] 1000
-#execute store result score #Rotation.X main_score run data get storage midwut:main Rotation[1] 1000
+
 
 scoreboard players operation #IN:angle math = #Rotation.X main_score
 function midwut:help/math/trig_func/sin

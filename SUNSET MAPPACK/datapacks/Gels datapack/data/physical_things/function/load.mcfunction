@@ -1,7 +1,4 @@
-	#======================#
-	#  made by Antohs256M  #
-	#======================#
-#
+
 
 scoreboard objectives add main_score dummy
 scoreboard objectives add const dummy
@@ -43,6 +40,5 @@ scoreboard players set #2800 const 2800
 scoreboard players set #1000 const 1000
 scoreboard players set #10000 const 10000
 
-#declare storage midwut:main
 
 schedule function physical_things:load_5s 5s

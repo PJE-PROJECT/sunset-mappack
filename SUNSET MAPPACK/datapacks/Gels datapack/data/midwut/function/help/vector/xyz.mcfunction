@@ -1,18 +1,3 @@
-# En
-## Input data:
-### /scoreboard players get #Vec.AXIS main_score
-## Output data:
-### /scoreboard players get #Vec math
-
-# Ru
-## Входные данные:
-### /scoreboard players get #Vec.AXIS main_score
-## Выходные данные:
-### /scoreboard players get #Vec math
-
-#scoreboard players operation #DX main_score = #Vec.X main_score
-#scoreboard players operation #DY main_score = #Vec.Y main_score
-#scoreboard players operation #DZ main_score = #Vec.Z main_score
 
 
 scoreboard players operation #IN:arctg2.X math = #Vec.Z main_score

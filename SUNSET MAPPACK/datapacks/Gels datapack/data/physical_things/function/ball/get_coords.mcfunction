@@ -10,7 +10,6 @@ scoreboard players add collision_y main_score 100
 scoreboard players operation collision_z main_score = #min_z main_score
 scoreboard players add collision_z main_score 100
 
-# Ищём ближайщую верщину на кубе
 scoreboard players operation collision_x main_score < #sphere_x main_score
 scoreboard players operation collision_x main_score > #min_x main_score
 scoreboard players operation collision_y main_score < #sphere_y main_score

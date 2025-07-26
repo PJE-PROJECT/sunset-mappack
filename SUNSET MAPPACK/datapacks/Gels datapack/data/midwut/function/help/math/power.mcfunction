@@ -1,10 +1,3 @@
-# En
-## (scoreboard players get #number math) ^ (scoreboard players get #power math)
-## scoreboard players get #out math - Output
-
-# Ru
-## (scoreboard players get #number math) ^ (scoreboard players get #power math)
-## scoreboard players get #out math - Выход
 
 
 scoreboard players operation #out math = #number math

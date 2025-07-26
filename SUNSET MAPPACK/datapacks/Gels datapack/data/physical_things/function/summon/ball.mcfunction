@@ -1,4 +1,4 @@
-#tellraw @a [{"text": "Server: "},{"text": "Хуй, а не шар"}]
+
 
 summon minecraft:marker ~ ~ ~ {Tags:["get_id","physical_things.ball","physical_things.ball_main","physical_things.entity"],data:{r:0.0f}}
 

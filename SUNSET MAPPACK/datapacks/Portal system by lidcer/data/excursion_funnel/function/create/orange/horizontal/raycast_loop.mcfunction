@@ -1,8 +1,6 @@
-# Добавить единичку в счёт Distance
+
 scoreboard players add @s Distance_funnel 1
 scoreboard players add @s Distance_funnel_render 1
-
-#Создание моста
 
 execute if entity @s[tag=!north,tag=!south] if score @s Distance_funnel_render matches 0..2 if block ^ ^ ^1 #excursion_funnel:excursion_funnel_air unless entity @e[type=minecraft:item_display,distance=..0.1,tag=funnel,limit=1,y_rotation=-90] unless entity @e[type=minecraft:item_display,distance=..0.1,tag=funnel,limit=1,y_rotation=90] run summon minecraft:item_display ~ ~ ~ {Tags:["funnel","funnel_o","funnel_new","funnel_h"],item_display:"fixed",brightness:{sky:15,block:15},width:2,height:2}
 execute if entity @s[tag=!north,tag=!south] if score @s Distance_funnel_render matches 3 unless entity @e[type=minecraft:item_display,distance=..0.1,tag=funnel,limit=1,y_rotation=-90] unless entity @e[type=minecraft:item_display,distance=..0.1,tag=funnel,limit=1,y_rotation=90] run summon minecraft:item_display ~ ~ ~ {item:{id:"minecraft:blue_stained_glass",components:{"minecraft:custom_model_data":109},count:1},Tags:["funnel","funnel_o","funnel_new","funnel_h"],item_display:"fixed",brightness:{sky:15,block:15},width:2,height:2}
@@ -23,5 +21,4 @@ execute positioned ^ ^0.5 ^0.5 if entity @e[type=minecraft:armor_stand,distance=
 
 
 
-# Зацикливание функции
 execute if block ^ ^ ^1 #excursion_funnel:excursion_funnel_air if block ^ ^1 ^ #excursion_funnel:excursion_funnel_air if entity @s[scores={Distance_funnel=..100}] positioned ~ ~-1 ~ unless entity @e[distance=..1,tag=excursion_funnel_stop] positioned ~ ~1 ~ positioned ^ ^ ^1 run function excursion_funnel:create/orange/horizontal/raycast_loop

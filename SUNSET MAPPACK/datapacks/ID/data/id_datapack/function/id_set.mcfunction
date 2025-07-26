@@ -4,7 +4,7 @@ scoreboard players operation @e[type=minecraft:turtle,tag=for_creeper] ID = ID.c
 tag @e[type=minecraft:turtle] remove for_creeper
 
 effect give @s minecraft:invisibility 1000000 0 true
-### Механизм ID
+
 scoreboard players operation @s ID = ID.cloud ID
 scoreboard players add ID.cloud ID 1
 tag @s add ID

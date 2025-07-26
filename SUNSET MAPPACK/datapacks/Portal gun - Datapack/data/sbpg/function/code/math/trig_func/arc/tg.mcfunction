@@ -1,12 +1,3 @@
-#==========================#
-# made by Sasai_Kudasai_BM #
-#==========================#
-# /function midwut:help/math/trig_func/arc/tg
-#y=-{631(-143000+10000000/{100+x}+430000000/{10000+x^2})}/100000
-#   C1       A              AD        B         BD           C2
-
-## scoreboard players get #IN:angle math - Input
-## scoreboard players get #OUT:arctg math - Output
 
 
 scoreboard players set #C1 main_score -631

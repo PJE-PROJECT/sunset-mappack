@@ -1,1 +1,0 @@
-tellraw @a [{"text":"Server: ","type":"text"},{"text":"Хуй, а не куб","type":"text"}]
